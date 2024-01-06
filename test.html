@@ -19,6 +19,9 @@
     <script>
         // Vulnerability: Cross-Site Scripting (XSS)
         // The script directly uses user input from the URL without any sanitization.
+        var userInput = document.location.href.split("userInput=")[1];
+        var sanitizedInput = sanitize(userInput);
+        document.write("User input: " + sanitizedInput);
         var userData = document.location.href.split("userInput=")[1];
         document.write("User input: " + userData);
     </script>
