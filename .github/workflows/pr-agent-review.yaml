@@ -26,5 +26,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PINECONE.API_KEY: ${{ secrets.PINECONE_API_KEY }}
           PINECONE.ENVIRONMENT: ${{ secrets.PINECONE_ENVIRONMENT }}
+          pr_description.keep_original_user_title: true
           github_action.auto_describe: "true" # enable\disable auto describe
-          # PR_CODE_SUGGESTIONS.AUTO_EXTENDED_MODE: true
