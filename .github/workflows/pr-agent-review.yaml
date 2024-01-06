@@ -33,5 +33,4 @@ jobs:
           # configurations
           pr_description.keep_original_user_title: true
           pr_description.use_description_markers: true
-          pr_description.add_original_user_description: true
           github_action.auto_describe: true # enable\disable auto describe
