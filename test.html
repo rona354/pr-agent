@@ -37,7 +37,8 @@
     </form>
     </form>
 
-    <iframe src="http://unsafe-website.com" ></iframe>
+    <iframe src="http://unsafe-website.com" sandbox></iframe>
+    <!-- Vulnerability: Using untrusted sources in iframes can lead to Clickjacking attacks -->
     <!-- Vulnerability: Using untrusted sources in iframes can lead to Clickjacking attacks -->
 
     <script src="http://example.com/old-library.js"></script>
