@@ -5,6 +5,17 @@
 </head>
 <body>
     <h1>Welcome to My Web Page</h1>
+    <button onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+          // Bug: Using the wrong variable name for multiplication
+          var total = number1 * number2;  // number1 is not defined
+          document.getElementById("result").textContent = "The result is: " + total;
+        }
+    </script>
+
     <script>
         // Vulnerability: Cross-Site Scripting (XSS)
         // The script directly uses user input from the URL without any sanitization.
