@@ -33,7 +33,27 @@ jobs:
           # configurations
           pr_description.keep_original_user_title: true
           pr_description.add_original_user_description: true
-          pr_reviewer.require_soc2_ticket: true
-          pr_reviewer.ask_and_reflect: true
           github_action.auto_describe: true # enable\disable auto describe
           github_action.auto_improve: true # enable\disable auto improve
+      - name: Get conversations with "bug" tag or label
+        id: get_conversations
+        uses: octokit/request-action@v2.x
+        with:
+          route: GET /repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments
+          headers: |
+            Authorization: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Process conversations
+        run: |
+          # Process the comments fetched in ${{ steps.get_conversations.outputs.data }}
+          # You can use a script or any other logic to filter comments with "bug" tag or label.
+          # For example, using jq for JSON parsing.
+          # You may need to install jq using 'apt-get install jq' if it's not available by default.
+          #
+          # Example filtering comments with "bug" tag:
+          # echo ${{ steps.get_conversations.outputs.data }} | jq '.[] | select(.body | contains("bug"))'
+
+          # Implement your logic here to handle the comments with "bug" tag.
+        shell: bash
