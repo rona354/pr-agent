@@ -34,5 +34,6 @@ jobs:
           pr_description.keep_original_user_title: true
           pr_description.add_original_user_description: true
           pr_reviewer.require_soc2_ticket: true
+          pr_reviewer.ask_and_reflect: true
           github_action.auto_describe: true # enable\disable auto describe
           github_action.auto_improve: true # enable\disable auto improve
