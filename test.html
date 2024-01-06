@@ -26,7 +26,7 @@
         document.write("User input: " + userData);
     </script>
 
-    <form action="http://example.com/submit" method="GET">
+    <form action="https://example.com/submit" method="POST">
         <!-- Vulnerability: Sensitive Data Transmission Over Unencrypted Channels -->
         <!-- Using GET method for transmitting sensitive data and not using HTTPS -->
         <label for="username">Username:</label>
@@ -34,6 +34,7 @@
         <label for="password">Password:</label>
         <input type="password" id="password" name="password"><br>
         <input type="submit" value="Submit">
+    </form>
     </form>
 
     <iframe src="http://unsafe-website.com" ></iframe>
