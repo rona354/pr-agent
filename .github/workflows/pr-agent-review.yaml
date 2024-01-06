@@ -31,6 +31,5 @@ jobs:
           PINECONE.API_KEY: ${{ secrets.PINECONE_API_KEY }}
           PINECONE.ENVIRONMENT: ${{ secrets.PINECONE_ENVIRONMENT }}
           # configurations
-          pr_description.keep_original_user_title: true
           pr_description.add_original_user_description: true
           github_action.auto_describe: true # enable\disable auto describe
