@@ -42,4 +42,4 @@ jobs:
       #     route: GET /repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: "echo Release found: '${{ steps.pragent.outputs.data }}'"
+      - run: "echo Release found: '${{ steps.pragent }}'"
