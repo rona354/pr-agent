@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Unsafe Web Page</title>
+    <title>My Web Page</title>
 </head>
 <body>
     <h1>Welcome to My Web Page</h1>
@@ -15,33 +15,5 @@
           document.getElementById("result").textContent = "The result is: " + total;
         }
     </script>
-
-    <script>
-        // Vulnerability: Cross-Site Scripting (XSS)
-        // The script directly uses user input from the URL without any sanitization.
-        var userInput = document.location.href.split("userInput=")[1];
-        var sanitizedInput = sanitize(userInput);
-        document.write("User input: " + sanitizedInput);
-        var userData = document.location.href.split("userInput=")[1];
-        document.write("User input: " + userData);
-    </script>
-
-    <form action="https://example.com/submit" method="POST">
-        <!-- Vulnerability: Sensitive Data Transmission Over Unencrypted Channels -->
-        <!-- Using GET method for transmitting sensitive data and not using HTTPS -->
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username"><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password"><br>
-        <input type="submit" value="Submit">
-    </form>
-    </form>
-
-    <iframe src="http://unsafe-website.com" sandbox></iframe>
-    <!-- Vulnerability: Using untrusted sources in iframes can lead to Clickjacking attacks -->
-    <!-- Vulnerability: Using untrusted sources in iframes can lead to Clickjacking attacks -->
-
-    <script src="http://example.com/old-library.js"></script>
-    <!-- Vulnerability: Including outdated JavaScript libraries can lead to exploitation of known vulnerabilities -->
 </body>
 </html>
