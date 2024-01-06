@@ -42,5 +42,5 @@ jobs:
       #     route: GET /repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: "echo 'Release found: $(jq -r . < ${{ steps.pragent }})'"
+      - run: "echo 'Release found: $(jq -r . < ${{ steps.pragent.outputs.output_file }})'"
 
